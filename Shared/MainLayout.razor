@@ -1,0 +1,76 @@
+﻿@inherits LayoutComponentBase
+
+<div class="sidebar">
+    <NavMenu />
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+    </div>
+
+    <div class="d-flex">
+        <div class="justify-content-start">
+            <button class="btn btn-danger" @onclick='() => tema.ButtonClass = "btn-danger"'>Btn Danger</button>
+            <button class="btn btn-primary" @onclick='() => tema.ButtonClass = "btn-primary"'>Btn Danger</button>
+
+        </div>
+    </div>
+
+
+
+    @*
+        Para podermos passar valores em cascata, precisamos utilizar um Componente chamado CascadingValue.
+        Todo o Componente que for renderizado dentro de um CascadingValue,
+        irá receber o seu valor por cascata.
+    *@
+
+    <CascadingValue Value="tema">
+        <div class="content px-4">
+            @Body
+        </div>
+    </CascadingValue>
+
+   
+
+</div>
+
+@code {
+    Tema tema = new Tema();
+
+    protected override void OnInitialized()
+    {
+        tema.ButtonClass = "btn-success";
+        tema.ListaUnidades = PreencherLista();
+    }
+
+    public List<Unidades> PreencherLista()
+    {
+        List<Unidades> lista = new List<Unidades>()
+{
+        new Unidades() { NomeUnidade = "John Doe", CodUnidade = 42 },
+        new Unidades() { NomeUnidade = "Jane Doe", CodUnidade = 34 },
+        new Unidades() { NomeUnidade = "Joe Doe", CodUnidade = 8 },
+        };
+
+        Console.WriteLine(lista);
+
+        return lista;
+    }
+
+
+    public void PreencherLista2()
+    {
+        List<Unidades> lista = new List<Unidades>()
+{
+        new Unidades() { NomeUnidade = "Felipe Souza 1 ", CodUnidade = 42 },
+        new Unidades() { NomeUnidade = "Felipe Souza 2 ", CodUnidade = 34 },
+        new Unidades() { NomeUnidade = "Felipe Souza 3 ", CodUnidade = 8 },
+        };
+
+        tema.ListaUnidades = lista;
+
+        StateHasChanged();
+
+    }
+}

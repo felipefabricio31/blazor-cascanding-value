@@ -1,0 +1,19 @@
+﻿<h3>Componente Select</h3>
+
+<select class="form-control"  style="max-width:500px">
+    @foreach (var item in tema.ListaUnidades)
+    {
+        <option>@item.NomeUnidade</option>
+    }
+</select>
+
+@code {
+/*
+Para recepcionar um valor passado por cascata em um componente filho,
+precisamos criar um parâmetro do tipo CascadingParameter.
+*/
+    [CascadingParameter]
+    public Tema tema { get; set; }
+
+
+}

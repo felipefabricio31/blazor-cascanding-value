@@ -1,0 +1,43 @@
+﻿@page "/"
+
+<h1>Cascanding Value</h1>
+
+<br />
+
+<Select></Select>
+
+<br />
+
+
+
+@foreach (var item in tema.ListaUnidades)
+{
+    <p>@item.CodUnidade - @item.NomeUnidade</p>
+}
+
+<button class="btn btn-dark @tema.ButtonClass" @onclick='() => PreencherLista2()'>Preencher Lista</button>
+
+
+@code {
+    /*
+ Para recepcionar um valor passado por cascata em um componente filho,
+ precisamos criar um parâmetro do tipo CascadingParameter.
+*/
+    [CascadingParameter]
+    public Tema tema { get; set; }
+
+
+    public void PreencherLista2()
+    {
+        List<Unidades> lista = new List<Unidades>()
+{
+        new Unidades() { NomeUnidade = "Felipe Souza 1 ", CodUnidade = 42 },
+        new Unidades() { NomeUnidade = "Felipe Souza 2 ", CodUnidade = 34 },
+        new Unidades() { NomeUnidade = "Felipe Souza 3 ", CodUnidade = 8 },
+        };
+
+        tema.ListaUnidades = lista;
+
+        StateHasChanged();
+    }
+}

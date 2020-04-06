@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\PROJETOS E ARQUIVOS DE TRABALHO\\PROJETOS\\EXEMPLOS\\CascandingValue\\CascandingValue.csproj": {}
+  },
+  "projects": {
+    "C:\\PROJETOS E ARQUIVOS DE TRABALHO\\PROJETOS\\EXEMPLOS\\CascandingValue\\CascandingValue.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PROJETOS E ARQUIVOS DE TRABALHO\\PROJETOS\\EXEMPLOS\\CascandingValue\\CascandingValue.csproj",
+        "projectName": "CascandingValue",
+        "projectPath": "C:\\PROJETOS E ARQUIVOS DE TRABALHO\\PROJETOS\\EXEMPLOS\\CascandingValue\\CascandingValue.csproj",
+        "packagesPath": "C:\\Users\\renato\\.nuget\\packages\\",
+        "outputPath": "C:\\PROJETOS E ARQUIVOS DE TRABALHO\\PROJETOS\\EXEMPLOS\\CascandingValue\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\renato\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Blazor.HttpClient": {
+              "target": "Package",
+              "version": "[3.2.0-preview3.20168.3, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[3.2.0-preview3.20168.3, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Build": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0-preview3.20168.3, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0-preview3.20168.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015048\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
